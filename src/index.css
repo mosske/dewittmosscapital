@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-title {
+    @apply text-4xl font-bold text-dmc-dark mb-8;
+  }
+  .section-subtitle {
+    @apply text-xl text-dmc-turquoise font-semibold mb-6;
+  }
+  .section-heading {
+    @apply text-2xl font-bold text-dmc-dark mb-4;
+  }
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
