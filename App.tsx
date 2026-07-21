@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ParallaxBackground } from './ParallaxBackground';
 import { 
   Menu, X, Mail, MapPin, Clock, Phone, ArrowRight, 
   Check, Globe, Calendar, Shield, Users, Leaf, Scale, Sparkles 
@@ -232,13 +233,11 @@ const App: React.FC = () => {
               transition={{ duration: 0.4 }}
             >
               {/* HERO SECTION */}
-              <div 
-                className="relative min-h-[700px] flex items-center justify-center text-center bg-stone-950 overflow-hidden"
-                style={{
-                  backgroundImage: `linear-gradient(to bottom, rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.95)), url('https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-7341939.jpeg')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
+              <ParallaxBackground 
+                imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-7341939.jpeg"
+                overlayGradient="linear-gradient(to bottom, rgba(12, 12, 12, 0.45), rgba(12, 12, 12, 0.75))"
+                minHeight="700px"
+                className="relative flex items-center justify-center text-center bg-stone-950"
               >
                 <div className="container mx-auto px-6 max-w-4xl py-24 z-10">
                   <motion.div 
@@ -260,7 +259,7 @@ const App: React.FC = () => {
                       Tailored Funding for Diverse Projects and Investment Opportunities
                     </p>
                     <div className="w-16 h-[1px] bg-[#C5A059]/50 mx-auto my-8"></div>
-                    <p className="text-stone-300 text-sm md:text-base leading-relaxed font-light max-w-3xl mx-auto">
+                    <p className="text-stone-100 drop-shadow-md text-sm md:text-base leading-relaxed font-light max-w-3xl mx-auto">
                       DeWitt Moss Capital stands as a premier specialist in the capital-raising sector, specializing in the provision of bespoke funding solutions meticulously crafted to address the unique requirements of diverse projects and investment opportunities. Our firm is dedicated to delivering innovative financial strategies through a comprehensive array of instruments, including:
                     </p>
                     <div className="pt-6">
@@ -274,8 +273,8 @@ const App: React.FC = () => {
                   </motion.div>
                 </div>
                 {/* Subtle bottom fade */}
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F9F8F4] to-transparent"></div>
-              </div>
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F9F8F4] to-transparent z-10"></div>
+              </ParallaxBackground>
 
               {/* SERVICES SECTION */}
               <section id="services" className="py-24 bg-[#F9F8F4]">
@@ -356,14 +355,11 @@ const App: React.FC = () => {
               </section>
 
               {/* STRATEGY SECTION */}
-              <section 
-                className="relative py-24 bg-stone-900 text-white overflow-hidden"
-                style={{
-                  backgroundImage: `linear-gradient(to bottom, rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.92)), url('https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-5234277.webp')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundAttachment: 'fixed'
-                }}
+              <ParallaxBackground 
+                imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-5234277.webp"
+                overlayGradient="linear-gradient(to bottom, rgba(20, 20, 20, 0.45), rgba(20, 20, 20, 0.75))"
+                minHeight="auto"
+                className="relative py-24 bg-stone-900 text-white"
               >
                 <div className="container mx-auto px-6 max-w-7xl z-10 relative">
                   <div className="text-center space-y-4 mb-16">
@@ -374,36 +370,36 @@ const App: React.FC = () => {
                   </div>
 
                   <div className="max-w-4xl mx-auto space-y-12 text-center">
-                    <p className="text-stone-300 text-base md:text-lg leading-relaxed font-light">
+                    <p className="text-white drop-shadow-md text-base md:text-lg leading-relaxed font-light">
                       At DeWitt Moss Capital, our strategic framework is centred on attaining a realistic and achievable Internal Rate of Return (IRR) through targeted investments in both established and emerging markets. We engage in a thorough and deliberate selection process for projects and investments that are strategically aligned with our vision. Our focus encompasses:
                     </p>
 
                     <div className="grid md:grid-cols-2 gap-12 text-left pt-8">
-                      <div className="space-y-3 bg-stone-950/60 p-8 rounded border border-stone-800/80">
+                      <div className="space-y-3 bg-stone-950/75 p-8 rounded border border-stone-800/80 backdrop-blur-sm">
                         <h3 className="font-serif text-xl font-medium text-[#C5A059]">
                           Targeted Market Engagement
                         </h3>
-                        <p className="text-stone-300 text-sm leading-relaxed font-light">
+                        <p className="text-stone-200 text-sm leading-relaxed font-light">
                           We prioritize investments in pivotal markets within countries that exhibit substantial growth potential. This strategic approach allows us to tap into diverse opportunities while mitigating risks associated with market fluctuations.
                         </p>
                       </div>
 
-                      <div className="space-y-3 bg-stone-950/60 p-8 rounded border border-stone-800/80">
+                      <div className="space-y-3 bg-stone-950/75 p-8 rounded border border-stone-800/80 backdrop-blur-sm">
                         <h3 className="font-serif text-xl font-medium text-[#C5A059]">
                           Emphasis on Scalability
                         </h3>
-                        <p className="text-stone-300 text-sm leading-relaxed font-light">
+                        <p className="text-stone-200 text-sm leading-relaxed font-light">
                           We place a strong emphasis on identifying projects that not only meet current investment criteria but also possess the capacity for scalability. This ensures that our investments can adapt and grow, maximizing their potential for future expansion.
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-stone-400 text-sm italic font-light pt-6">
+                    <p className="text-stone-300 text-sm italic font-light pt-6">
                       Through this comprehensive strategy, we aim to create lasting value for our stakeholders while contributing positively to the economic landscapes in which we operate.
                     </p>
                   </div>
                 </div>
-              </section>
+              </ParallaxBackground>
 
               {/* MARKET FOCUS SECTION */}
               <section className="py-24 bg-stone-950 text-white">
@@ -636,13 +632,11 @@ const App: React.FC = () => {
               transition={{ duration: 0.4 }}
             >
               {/* HERO SECTION */}
-              <div 
-                className="relative min-h-[500px] flex items-center justify-center text-center bg-stone-950 overflow-hidden"
-                style={{
-                  backgroundImage: `linear-gradient(to bottom, rgba(12, 12, 12, 0.8), rgba(12, 12, 12, 0.9)), url('https://dewittmosscapital.com/wp-content/uploads/2024/10/free-photo-of-modern-constructions-on-seashore-in-coastal-city.jpeg')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
+              <ParallaxBackground 
+                imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/free-photo-of-modern-constructions-on-seashore-in-coastal-city.jpeg"
+                overlayGradient="linear-gradient(to bottom, rgba(12, 12, 12, 0.4), rgba(12, 12, 12, 0.75))"
+                minHeight="500px"
+                className="relative flex items-center justify-center text-center bg-stone-950"
               >
                 <div className="container mx-auto px-6 max-w-5xl py-24 z-10">
                   <div className="space-y-6">
@@ -650,13 +644,13 @@ const App: React.FC = () => {
                       About Us
                     </h1>
                     <div className="w-16 h-[1px] bg-[#C5A059]/60 mx-auto"></div>
-                    <p className="text-stone-300 text-sm md:text-base leading-relaxed font-light max-w-4xl mx-auto text-justify md:text-center">
+                    <p className="text-stone-100 drop-shadow-md text-sm md:text-base leading-relaxed font-light max-w-4xl mx-auto text-justify md:text-center">
                       DeWitt Moss Capital specializes in delivering customized funding solutions that are meticulously designed to address the distinct requirements of various projects and investment opportunities. Our firm is committed to providing innovative financial strategies, utilizing a diverse range of financial instruments to meet the evolving needs of our clients. At DeWitt Moss Capital, we prioritize building lasting partnerships with our clients, ensuring that each solution we offer is not only effective but also aligned with their strategic goals and vision. With our expertise and personalized approach, we strive to stand out in the competitive landscape of capital markets, driving success for our clients and fostering growth in their endeavors.
                     </p>
                   </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#F9F8F4] to-transparent"></div>
-              </div>
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#F9F8F4] to-transparent z-10"></div>
+              </ParallaxBackground>
 
               {/* OUR VISION */}
               <section className="py-24 bg-[#F9F8F4]">
@@ -812,13 +806,11 @@ const App: React.FC = () => {
               className="space-y-0"
             >
               {/* HERO SECTION */}
-              <div 
-                className="relative min-h-[350px] flex items-center justify-center text-center bg-stone-950 overflow-hidden"
-                style={{
-                  backgroundImage: `linear-gradient(to bottom, rgba(12, 12, 12, 0.8), rgba(12, 12, 12, 0.9)), url('https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-11312733.webp')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
+              <ParallaxBackground 
+                imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-11312733.webp"
+                overlayGradient="linear-gradient(to bottom, rgba(12, 12, 12, 0.4), rgba(12, 12, 12, 0.7))"
+                minHeight="350px"
+                className="relative flex items-center justify-center text-center bg-stone-950"
               >
                 <div className="container mx-auto px-6 max-w-4xl py-12 z-10">
                   <div className="space-y-4">
@@ -831,8 +823,8 @@ const App: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#F9F8F4] to-transparent"></div>
-              </div>
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#F9F8F4] to-transparent z-10"></div>
+              </ParallaxBackground>
 
               {/* CONTACT DETAILS GRID */}
               <section className="py-24 bg-[#F9F8F4]">
