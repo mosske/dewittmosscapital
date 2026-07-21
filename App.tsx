@@ -758,7 +758,7 @@ const App: React.FC = () => {
                       <div className="lg:col-span-1 space-y-2">
                         <span className="text-[#C5A059] text-xs font-semibold uppercase tracking-widest">Co-Founder</span>
                         <h3 className="font-serif text-2xl font-semibold text-white">Arjun Dosaj</h3>
-                        <div className="text-stone-500 text-xs">30+ Years Experience</div>
+                        <div className="text-stone-500 text-xs">40+ Years Experience</div>
                       </div>
                       <div className="lg:col-span-2 text-stone-300 text-sm leading-relaxed font-light space-y-4 text-justify">
                         <p>
