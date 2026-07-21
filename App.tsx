@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ParallaxBackground } from './ParallaxBackground';
+import { Logo } from './Logo';
 import { 
   Menu, X, Mail, MapPin, Clock, Phone, ArrowRight, 
   Check, Globe, Calendar, Shield, Users, Leaf, Scale, Sparkles 
@@ -98,17 +99,32 @@ const App: React.FC = () => {
         <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
           {/* Logo Brand */}
           <div 
-            className="flex items-center cursor-pointer group" 
+            className="flex items-center gap-3 cursor-pointer group" 
             onClick={() => navigateTo('home')}
           >
-            <img 
-              src="https://dewittmosscapital.com/wp-content/uploads/2024/10/DMC-Full-Logo2-250x53.png" 
-              className={`h-9 md:h-10 w-auto object-contain transition-all duration-300 ${
-                scrolled ? 'brightness-100' : 'brightness-0 invert'
-              }`}
-              alt="DeWitt Moss Capital Logo"
-              referrerPolicy="no-referrer"
+            <Logo 
+              className="h-9 md:h-11 w-auto transition-transform duration-300 group-hover:scale-105"
+              variant="adaptive"
+              scrolled={scrolled}
             />
+            <div className="flex flex-col select-none">
+              <span 
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                className={`font-bold text-sm md:text-base tracking-[0.12em] transition-colors duration-300 leading-tight ${
+                  scrolled ? 'text-stone-900' : 'text-white'
+                }`}
+              >
+                DEWITT MOSS CAPITAL
+              </span>
+              <span 
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                className={`text-[9px] md:text-[10px] font-medium tracking-wide italic transition-colors duration-300 ${
+                  scrolled ? 'text-[#C5A059]' : 'text-stone-300'
+                }`}
+              >
+                Funding Dreams, Fueling Growth
+              </span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -987,15 +1003,27 @@ const App: React.FC = () => {
             {/* Branding */}
             <div className="space-y-4">
               <div 
-                className="flex items-center cursor-pointer group" 
+                className="flex items-center gap-3 cursor-pointer group" 
                 onClick={() => navigateTo('home')}
               >
-                <img 
-                  src="https://dewittmosscapital.com/wp-content/uploads/2024/10/DMC-Full-Logo2-250x53.png" 
-                  className="h-9 w-auto object-contain brightness-0 invert"
-                  alt="DeWitt Moss Capital Logo"
-                  referrerPolicy="no-referrer"
+                <Logo 
+                  className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                  variant="gold"
                 />
+                <div className="flex flex-col select-none">
+                  <span 
+                    style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                    className="font-bold text-base tracking-[0.12em] text-[#C5A059] leading-tight"
+                  >
+                    DEWITT MOSS CAPITAL
+                  </span>
+                  <span 
+                    style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                    className="text-[10px] font-medium tracking-wide italic text-stone-400"
+                  >
+                    Funding Dreams, Fueling Growth
+                  </span>
+                </div>
               </div>
               <p className="text-stone-400 text-xs font-light leading-relaxed max-w-xs">
                 Bespoke funding and capital advisory services engineered for institutional success across pivotal Asian markets.
