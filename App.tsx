@@ -98,28 +98,17 @@ const App: React.FC = () => {
         <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
           {/* Logo Brand */}
           <div 
-            className="flex items-center gap-3 cursor-pointer group" 
+            className="flex items-center cursor-pointer group" 
             onClick={() => navigateTo('home')}
           >
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-serif font-bold text-lg border transition-all ${
-              scrolled 
-                ? 'bg-stone-950 text-[#C5A059] border-[#C5A059]/20' 
-                : 'bg-white text-stone-950 border-white/20'
-            }`}>
-              DM
-            </div>
-            <div className="flex flex-col">
-              <span className={`font-serif font-bold text-base md:text-lg tracking-[0.18em] transition-colors duration-300 ${
-                scrolled ? 'text-stone-950' : 'text-white'
-              }`}>
-                DEWITT MOSS
-              </span>
-              <span className={`text-[8px] font-bold tracking-[0.35em] leading-none transition-colors duration-300 ${
-                scrolled ? 'text-stone-500' : 'text-stone-300/80'
-              }`}>
-                CAPITAL
-              </span>
-            </div>
+            <img 
+              src="https://dewittmosscapital.com/wp-content/uploads/2024/10/DMC-Full-Logo2-250x53.png" 
+              className={`h-9 md:h-10 w-auto object-contain transition-all duration-300 ${
+                scrolled ? 'brightness-100' : 'brightness-0 invert'
+              }`}
+              alt="DeWitt Moss Capital Logo"
+              referrerPolicy="no-referrer"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -997,18 +986,16 @@ const App: React.FC = () => {
             
             {/* Branding */}
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-white text-stone-950 font-serif font-bold text-base flex items-center justify-center border border-white/20">
-                  DM
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-serif font-bold text-sm tracking-[0.15em] text-white">
-                    DEWITT MOSS
-                  </span>
-                  <span className="text-[7px] font-bold text-stone-400 tracking-[0.3em] leading-none">
-                    CAPITAL PARTNERS
-                  </span>
-                </div>
+              <div 
+                className="flex items-center cursor-pointer group" 
+                onClick={() => navigateTo('home')}
+              >
+                <img 
+                  src="https://dewittmosscapital.com/wp-content/uploads/2024/10/DMC-Full-Logo2-250x53.png" 
+                  className="h-9 w-auto object-contain brightness-0 invert"
+                  alt="DeWitt Moss Capital Logo"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <p className="text-stone-400 text-xs font-light leading-relaxed max-w-xs">
                 Bespoke funding and capital advisory services engineered for institutional success across pivotal Asian markets.
