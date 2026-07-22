@@ -857,7 +857,7 @@ const App: React.FC = () => {
                         </p>
                         <p className="flex items-center gap-2.5">
                           <span className="font-semibold text-stone-850">Email:</span> 
-                          <a href="mailto:info@dewittmosscapital.com" className="text-[#C5A059] hover:underline font-normal">info@dewittmosscapital.com</a>
+                          <a href="mailto:info@dewittmossdosajcapital.com" className="text-[#C5A059] hover:underline font-normal">info@dewittmossdosajcapital.com</a>
                         </p>
                       </div>
                     </div>
@@ -1060,7 +1060,7 @@ const App: React.FC = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <Mail size={14} className="text-[#C5A059] flex-shrink-0" />
-                  <a href="mailto:info@dewittmosscapital.com" className="hover:text-[#C5A059] transition-colors">info@dewittmosscapital.com</a>
+                  <a href="mailto:info@dewittmossdosajcapital.com" className="hover:text-[#C5A059] transition-colors">info@dewittmossdosajcapital.com</a>
                 </p>
                 <p className="flex items-center gap-2">
                   <Clock size={14} className="text-[#C5A059] flex-shrink-0" />
