@@ -25,13 +25,9 @@ const App: React.FC = () => {
 
   const [appointmentForm, setAppointmentForm] = useState({
     name: '',
+    company: '',
     email: '',
     phone: '',
-    preferredDate: '',
-    preferredTime: '10:00 AM',
-    projectLocation: 'Singapore',
-    fundingAmount: '$1M - $5M',
-    capitalType: 'Blended Approach',
     message: ''
   });
   const [appointmentSuccess, setAppointmentSuccess] = useState(false);
@@ -66,7 +62,7 @@ const App: React.FC = () => {
 
   const handleAppointmentSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!appointmentForm.name || !appointmentForm.email || !appointmentForm.preferredDate) {
+    if (!appointmentForm.name || !appointmentForm.company || !appointmentForm.email || !appointmentForm.message) {
       return;
     }
     setAppointmentSuccess(true);
@@ -75,13 +71,9 @@ const App: React.FC = () => {
       setShowAppointmentModal(false);
       setAppointmentForm({
         name: '',
+        company: '',
         email: '',
         phone: '',
-        preferredDate: '',
-        preferredTime: '10:00 AM',
-        projectLocation: 'Singapore',
-        fundingAmount: '$1M - $5M',
-        capitalType: 'Blended Approach',
         message: ''
       });
     }, 3000);
@@ -1132,132 +1124,98 @@ const App: React.FC = () => {
                     </p>
                   </div>
                 ) : (
-                  <div className="space-y-6">
-                    {/* Basic Info */}
+                  <div className="space-y-5">
+                    {/* Full Name & Company */}
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
-                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-500">Your Full Name</label>
+                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-600">
+                          Your Full Name <span className="text-[#C5A059]">*</span>
+                        </label>
                         <input 
                           type="text" 
                           required
+                          placeholder="e.g. John Doe"
                           value={appointmentForm.name}
                           onChange={(e) => setAppointmentForm({ ...appointmentForm, name: e.target.value })}
-                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
+                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors placeholder:text-stone-300"
                         />
                       </div>
                       <div className="space-y-1.5">
-                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-500">Corporate Email</label>
+                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-600">
+                          Your Company <span className="text-[#C5A059]">*</span>
+                        </label>
+                        <input 
+                          type="text" 
+                          required
+                          placeholder="e.g. Acquired Holdings Ltd"
+                          value={appointmentForm.company}
+                          onChange={(e) => setAppointmentForm({ ...appointmentForm, company: e.target.value })}
+                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors placeholder:text-stone-300"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Email & Contact Number */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-600">
+                          Corporate Email <span className="text-[#C5A059]">*</span>
+                        </label>
                         <input 
                           type="email" 
                           required
+                          placeholder="e.g. j.doe@company.com"
                           value={appointmentForm.email}
                           onChange={(e) => setAppointmentForm({ ...appointmentForm, email: e.target.value })}
-                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
+                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors placeholder:text-stone-300"
                         />
                       </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
-                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-500">Preferred Date</label>
+                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-600">
+                          Contact Number
+                        </label>
                         <input 
-                          type="date" 
-                          required
-                          value={appointmentForm.preferredDate}
-                          onChange={(e) => setAppointmentForm({ ...appointmentForm, preferredDate: e.target.value })}
-                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
+                          type="tel" 
+                          placeholder="e.g. +65 9123 4567"
+                          value={appointmentForm.phone}
+                          onChange={(e) => setAppointmentForm({ ...appointmentForm, phone: e.target.value })}
+                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors placeholder:text-stone-300"
                         />
                       </div>
-                      <div className="space-y-1.5">
-                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-500">Preferred Time</label>
-                        <select 
-                          value={appointmentForm.preferredTime}
-                          onChange={(e) => setAppointmentForm({ ...appointmentForm, preferredTime: e.target.value })}
-                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
-                        >
-                          <option>9:00 AM</option>
-                          <option>10:00 AM</option>
-                          <option>11:00 AM</option>
-                          <option>1:00 PM</option>
-                          <option>2:00 PM</option>
-                          <option>3:00 PM</option>
-                          <option>4:00 PM</option>
-                        </select>
-                      </div>
                     </div>
 
-                    {/* Capital Sizing Info */}
-                    <div className="grid md:grid-cols-3 gap-4 border-t border-stone-200/60 pt-6">
-                      <div className="space-y-1.5">
-                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-500">Project Location</label>
-                        <select 
-                          value={appointmentForm.projectLocation}
-                          onChange={(e) => setAppointmentForm({ ...appointmentForm, projectLocation: e.target.value })}
-                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
-                        >
-                          <option>Singapore</option>
-                          <option>Thailand</option>
-                          <option>Vietnam</option>
-                          <option>Maldives</option>
-                          <option>Sri Lanka</option>
-                          <option>Japan</option>
-                          <option>South Korea</option>
-                          <option>Other Asian Country</option>
-                        </select>
-                      </div>
-                      <div className="space-y-1.5">
-                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-500">Funding Needed</label>
-                        <select 
-                          value={appointmentForm.fundingAmount}
-                          onChange={(e) => setAppointmentForm({ ...appointmentForm, fundingAmount: e.target.value })}
-                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
-                        >
-                          <option>Under $1M</option>
-                          <option>$1M - $5M</option>
-                          <option>$5M - $10M</option>
-                          <option>$10M - $50M</option>
-                          <option>$50M+</option>
-                        </select>
-                      </div>
-                      <div className="space-y-1.5">
-                        <label className="text-[10px] uppercase tracking-wider font-bold text-stone-500">Capital Instrument</label>
-                        <select 
-                          value={appointmentForm.capitalType}
-                          onChange={(e) => setAppointmentForm({ ...appointmentForm, capitalType: e.target.value })}
-                          className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors"
-                        >
-                          <option>Equity Investments</option>
-                          <option>Debt Financing</option>
-                          <option>Convertible Loans</option>
-                          <option>Blended Approach</option>
-                        </select>
-                      </div>
-                    </div>
-
+                    {/* Message / Brief */}
                     <div className="space-y-1.5">
-                      <label className="text-[10px] uppercase tracking-wider font-bold text-stone-500">Brief Project Description / Scope</label>
+                      <label className="text-[10px] uppercase tracking-wider font-bold text-stone-600">
+                        Message or Brief Regarding Your Project <span className="text-[#C5A059]">*</span>
+                      </label>
                       <textarea 
-                        rows={3}
+                        rows={4}
+                        required
+                        placeholder="Please provide a brief overview of your capital requirements or project details..."
                         value={appointmentForm.message}
                         onChange={(e) => setAppointmentForm({ ...appointmentForm, message: e.target.value })}
-                        className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors resize-none"
+                        className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded text-stone-900 text-sm focus:outline-none focus:border-[#C5A059] transition-colors resize-none placeholder:text-stone-300"
                       ></textarea>
                     </div>
 
-                    <div className="text-right pt-4 border-t border-stone-200/60 flex justify-end gap-3">
-                      <button 
-                        type="button"
-                        onClick={() => setShowAppointmentModal(false)}
-                        className="px-6 py-3 border border-stone-200 text-stone-600 text-[10px] font-bold uppercase tracking-wider rounded hover:bg-stone-50 transition-colors"
-                      >
-                        Cancel
-                      </button>
-                      <button 
-                        type="submit"
-                        className="px-6 py-3 bg-stone-950 text-white text-[10px] font-bold uppercase tracking-widest rounded hover:bg-[#C5A059] hover:text-stone-950 transition-colors cursor-pointer"
-                      >
-                        Submit Request
-                      </button>
+                    <div className="text-right pt-4 border-t border-stone-200/60 flex justify-between items-center gap-3">
+                      <span className="text-[10px] text-stone-400 italic">* Required fields</span>
+                      <div className="flex gap-3">
+                        <button 
+                          type="button"
+                          onClick={() => setShowAppointmentModal(false)}
+                          className="px-6 py-3 border border-stone-200 text-stone-600 text-[10px] font-bold uppercase tracking-wider rounded hover:bg-stone-50 transition-colors cursor-pointer"
+                        >
+                          Cancel
+                        </button>
+                        <button 
+                          type="submit"
+                          className="px-6 py-3 bg-stone-950 text-white text-[10px] font-bold uppercase tracking-widest rounded hover:bg-[#C5A059] hover:text-stone-950 transition-colors cursor-pointer"
+                        >
+                          Submit Request
+                        </button>
+                      </div>
                     </div>
                   </div>
                 )}
