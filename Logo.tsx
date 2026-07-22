@@ -1,9 +1,8 @@
 import React from 'react';
 
-// Import local transparent PNG image assets
-import logoBlack from './src/assets/images/logo-black.png';
-import logoWhite from './src/assets/images/logo-white.png';
-import logoGold from './src/assets/images/logo-gold.png';
+// Import local Griffin logo PNG image assets
+import griffinLogoGold from './src/assets/images/Griffin_logo_gold.png';
+import griffinLogoWhite from './src/assets/images/Griffin_logo_white.png';
 
 interface LogoProps {
   className?: string;
@@ -16,17 +15,17 @@ export const Logo: React.FC<LogoProps> = ({
   variant = 'adaptive',
   scrolled = false
 }) => {
-  let logoSrc = logoGold;
+  let logoSrc = griffinLogoGold;
 
   if (variant === 'white') {
-    logoSrc = logoWhite;
+    logoSrc = griffinLogoWhite;
   } else if (variant === 'dark') {
-    logoSrc = logoBlack;
+    logoSrc = griffinLogoGold;
   } else if (variant === 'adaptive') {
     if (scrolled) {
-      logoSrc = logoGold;
+      logoSrc = griffinLogoGold;
     } else {
-      logoSrc = logoWhite;
+      logoSrc = griffinLogoWhite;
     }
   }
 
@@ -34,7 +33,7 @@ export const Logo: React.FC<LogoProps> = ({
     <div className={`inline-flex items-center justify-center ${className}`}>
       <img
         src={logoSrc}
-        alt="DeWitt Moss Dosaj Crest Logo"
+        alt="DeWitt Moss Capital Griffin Crest Logo"
         className="h-full w-auto object-contain"
         referrerPolicy="no-referrer"
       />

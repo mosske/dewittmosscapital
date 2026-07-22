@@ -105,7 +105,7 @@ const App: React.FC = () => {
                   scrolled ? 'text-stone-900' : 'text-white'
                 }`}
               >
-                DEWITT MOSS DOSAJ
+                DEWITT MOSS CAPITAL
               </span>
               <span 
                 className={`font-serif text-[9px] md:text-[10px] font-medium tracking-wide italic transition-colors duration-300 ${
@@ -277,7 +277,7 @@ const App: React.FC = () => {
                     </h2>
                     <div className="w-12 h-1 bg-[#C5A059] mx-auto"></div>
                     <p className="text-stone-600 text-sm md:text-base leading-relaxed font-light max-w-3xl mx-auto pt-2">
-                      DeWitt Moss Dosaj Capital stands as a premier specialist in the capital-raising sector, specializing in the provision of bespoke funding solutions meticulously crafted to address the unique requirements of diverse projects and investment opportunities. Our firm is dedicated to delivering innovative financial strategies through a comprehensive array of instruments, including:
+                      DeWitt Moss Capital stands as a premier specialist in the capital-raising sector, specializing in the provision of bespoke funding solutions meticulously crafted to address the unique requirements of diverse projects and investment opportunities. Our firm is dedicated to delivering innovative financial strategies through a comprehensive array of instruments, including:
                     </p>
                   </div>
 
@@ -366,7 +366,7 @@ const App: React.FC = () => {
 
                   <div className="max-w-4xl mx-auto space-y-12 text-center">
                     <p className="text-white drop-shadow-md text-base md:text-lg leading-relaxed font-light">
-                      At DeWitt Moss Dosaj Capital, our strategic framework is centred on attaining a realistic and achievable Internal Rate of Return (IRR) through targeted investments in both established and emerging markets. We engage in a thorough and deliberate selection process for projects and investments that are strategically aligned with our vision. Our focus encompasses:
+                      At DeWitt Moss Capital, our strategic framework is centred on attaining a realistic and achievable Internal Rate of Return (IRR) through targeted investments in both established and emerging markets. We engage in a thorough and deliberate selection process for projects and investments that are strategically aligned with our vision. Our focus encompasses:
                     </p>
 
                     <div className="grid md:grid-cols-2 gap-12 text-left pt-8">
@@ -640,7 +640,7 @@ const App: React.FC = () => {
                     </h1>
                     <div className="w-16 h-[1px] bg-[#C5A059]/60 mx-auto"></div>
                     <p className="text-stone-100 drop-shadow-md text-sm md:text-base leading-relaxed font-light max-w-4xl mx-auto text-justify md:text-center">
-                      DeWitt Moss Dosaj Capital specializes in delivering customized funding solutions that are meticulously designed to address the distinct requirements of various projects and investment opportunities. Our firm is committed to providing innovative financial strategies, utilizing a diverse range of financial instruments to meet the evolving needs of our clients. At DeWitt Moss Dosaj Capital, we prioritize building lasting partnerships with our clients, ensuring that each solution we offer is not only effective but also aligned with their strategic goals and vision. With our expertise and personalized approach, we strive to stand out in the competitive landscape of capital markets, driving success for our clients and fostering growth in their endeavors.
+                      DeWitt Moss Capital specializes in delivering customized funding solutions that are meticulously designed to address the distinct requirements of various projects and investment opportunities. Our firm is committed to providing innovative financial strategies, utilizing a diverse range of financial instruments to meet the evolving needs of our clients. At DeWitt Moss Capital, we prioritize building lasting partnerships with our clients, ensuring that each solution we offer is not only effective but also aligned with their strategic goals and vision. With our expertise and personalized approach, we strive to stand out in the competitive landscape of capital markets, driving success for our clients and fostering growth in their endeavors.
                     </p>
                   </div>
                 </div>
@@ -681,7 +681,7 @@ const App: React.FC = () => {
                     <div className="bg-white p-8 border border-stone-200/50 rounded shadow-sm space-y-4 hover:border-[#C5A059]/30 transition-all">
                       <div className="text-2xl font-serif font-bold text-[#C5A059]">03</div>
                       <p className="text-stone-700 text-sm leading-relaxed font-serif italic">
-                        “To expand our global footprint and establish DeWitt Moss Dosaj Capital as the premier specialist in capital raising, fostering strategic partnerships and driving economic progress through our commitment to excellence and client-centric solutions.”
+                        “To expand our global footprint and establish DeWitt Moss Capital as the premier specialist in capital raising, fostering strategic partnerships and driving economic progress through our commitment to excellence and client-centric solutions.”
                       </p>
                     </div>
 
@@ -760,7 +760,7 @@ const App: React.FC = () => {
                           Arjun is a seasoned professional with over 30 years of extensive global experience across diverse industries, including Hospitality and Leisure, Private Equity Real Estate, Insurance, Mortgage, Banking, and Business Process Offshoring. His primary expertise is rooted in the Real Estate sector, with a strong focus on Asset Management, Portfolio Management, Distressed Real Estate, and Value Enhancement strategies. In his impressive career, Arjun has held senior leadership positions at prominent organizations such as the Indian Hotels Company, GE Capital, Standard Chartered Bank, and Pacific Star Group. Before founding Avista Asset Management, he served as the President of Asset Management and Group COO at Pacific Star, a leading private equity real estate investment management firm with a pan-Asian focus. In this capacity, Arjun successfully managed a portfolio exceeding $4 billion in real estate assets across Asia, overseeing multi-strategy funds and mandates for institutional investors.
                         </p>
                         <p>
-                          During his tenure at Pacific Star, Arjun played a pivotal role in several landmark real estate transactions and turnaround strategies, contributing to high-profile projects such as Capital Square (Singapore), Triple One Somerset (Singapore), The Platinum (Shanghai), Cross Tower (Shanghai), KL Pavilion (Kuala Lumpur), Noon Square (Seoul), GH House (Tokyo), Sathorn Gardens (Bangkok), 8 Thonglor (Bangkok), and Sunrise City (Ho Chi Minh City), among others. At DeWitt Moss Dosaj Capital, Arjun’s current focus is on delivering comprehensive asset management and investment services within the real estate spectrum for clients across Southeast Asia, India, and China. His areas of interest encompass Portfolio & Asset Management, Development Management, Distressed Real Estate assets and portfolios, and Fund Management across various sectors, including Commercial, Retail, Residential, Hospitality, and Retirement Homes & Communities. Arjun is also a certified Six Sigma Black Belt and has received specialized training as an expert in Design for Six Sigma (DFSS) processes, further enhancing his ability to drive operational excellence and innovation within the organizations he serves.
+                          During his tenure at Pacific Star, Arjun played a pivotal role in several landmark real estate transactions and turnaround strategies, contributing to high-profile projects such as Capital Square (Singapore), Triple One Somerset (Singapore), The Platinum (Shanghai), Cross Tower (Shanghai), KL Pavilion (Kuala Lumpur), Noon Square (Seoul), GH House (Tokyo), Sathorn Gardens (Bangkok), 8 Thonglor (Bangkok), and Sunrise City (Ho Chi Minh City), among others. At DeWitt Moss Capital, Arjun’s current focus is on delivering comprehensive asset management and investment services within the real estate spectrum for clients across Southeast Asia, India, and China. His areas of interest encompass Portfolio & Asset Management, Development Management, Distressed Real Estate assets and portfolios, and Fund Management across various sectors, including Commercial, Retail, Residential, Hospitality, and Retirement Homes & Communities. Arjun is also a certified Six Sigma Black Belt and has received specialized training as an expert in Design for Six Sigma (DFSS) processes, further enhancing his ability to drive operational excellence and innovation within the organizations he serves.
                         </p>
                       </div>
                     </div>
@@ -1004,7 +1004,7 @@ const App: React.FC = () => {
                   <span 
                     className="font-serif font-bold text-base tracking-[0.12em] text-[#C5A059] leading-tight"
                   >
-                    DEWITT MOSS DOSAJ
+                    DEWITT MOSS CAPITAL
                   </span>
                   <span 
                     className="font-serif text-[10px] font-medium tracking-wide italic text-stone-400"
@@ -1048,7 +1048,7 @@ const App: React.FC = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <Mail size={14} className="text-[#C5A059] flex-shrink-0" />
-                  <a href="mailto:info@dewittmossdosaj.com" className="hover:text-[#C5A059] transition-colors">info@dewittmossdosaj.com</a>
+                  <a href="mailto:info@dewittmosscapital.com" className="hover:text-[#C5A059] transition-colors">info@dewittmosscapital.com</a>
                 </p>
                 <p className="flex items-center gap-2">
                   <Clock size={14} className="text-[#C5A059] flex-shrink-0" />
@@ -1060,9 +1060,9 @@ const App: React.FC = () => {
           </div>
 
           <div className="border-t border-stone-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-stone-500 font-light tracking-wider">
-            <p>Copyright &copy; 2026 DeWitt Moss Dosaj Capital Pte Ltd. All Rights Reserved.</p>
+            <p>Copyright &copy; 2026 DeWitt Moss Capital Pte Ltd. All Rights Reserved.</p>
             <p className="flex gap-1 items-center">
-              <span>Powered by</span> <span className="font-semibold text-stone-400">DeWitt Moss Dosaj Capital Pte Ltd</span>
+              <span>Powered by</span> <span className="font-semibold text-stone-400">DeWitt Moss Capital Pte Ltd</span>
             </p>
           </div>
         </div>
@@ -1116,7 +1116,7 @@ const App: React.FC = () => {
                     </div>
                     <h4 className="font-serif text-xl text-stone-950 font-semibold">Request Received</h4>
                     <p className="text-stone-600 text-sm font-light max-w-md mx-auto">
-                      Thank you for submitting your request. An underwriting officer from DeWitt Moss Dosaj Capital will contact you shortly to confirm your scheduled appointment.
+                      Thank you for submitting your request. An underwriting officer from DeWitt Moss Capital will contact you shortly to confirm your scheduled appointment.
                     </p>
                   </div>
                 ) : (
