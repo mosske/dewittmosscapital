@@ -33,7 +33,7 @@ export const Logo: React.FC<LogoProps> = ({
     <div className={`inline-flex items-center justify-center ${className}`}>
       <img
         src={logoSrc}
-        alt="DeWitt Moss Capital Griffin Crest Logo"
+        alt="DeWitt Moss Dosaj Griffin Crest Logo"
         className="h-full w-auto object-contain"
         referrerPolicy="no-referrer"
       />
