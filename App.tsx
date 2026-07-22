@@ -254,10 +254,7 @@ const App: React.FC = () => {
                       Tailored Funding for Diverse Projects and Investment Opportunities
                     </p>
                     <div className="w-16 h-[1px] bg-[#C5A059]/50 mx-auto my-8"></div>
-                    <p className="text-stone-100 drop-shadow-md text-sm md:text-base leading-relaxed font-light max-w-3xl mx-auto">
-                      DeWitt Moss Dosaj Capital stands as a premier specialist in the capital-raising sector, specializing in the provision of bespoke funding solutions meticulously crafted to address the unique requirements of diverse projects and investment opportunities. Our firm is dedicated to delivering innovative financial strategies through a comprehensive array of instruments, including:
-                    </p>
-                    <div className="pt-6">
+                    <div className="pt-2">
                       <button 
                         onClick={() => setShowAppointmentModal(true)}
                         className="px-8 py-4 bg-[#C5A059] text-stone-950 text-xs font-bold uppercase tracking-[0.25em] rounded hover:bg-[#b08e4d] hover:text-white transition-all shadow-xl inline-flex items-center gap-2 group"
@@ -279,6 +276,9 @@ const App: React.FC = () => {
                       Our Services
                     </h2>
                     <div className="w-12 h-1 bg-[#C5A059] mx-auto"></div>
+                    <p className="text-stone-600 text-sm md:text-base leading-relaxed font-light max-w-3xl mx-auto pt-2">
+                      DeWitt Moss Dosaj Capital stands as a premier specialist in the capital-raising sector, specializing in the provision of bespoke funding solutions meticulously crafted to address the unique requirements of diverse projects and investment opportunities. Our firm is dedicated to delivering innovative financial strategies through a comprehensive array of instruments, including:
+                    </p>
                   </div>
 
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
