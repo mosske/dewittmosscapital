@@ -744,14 +744,6 @@ const App: React.FC = () => {
                     {/* Shane DeWitt */}
                     <div className="grid lg:grid-cols-3 gap-12 items-start border-b border-stone-800 pb-16">
                       <div className="lg:col-span-1 space-y-4">
-                        <div className="overflow-hidden rounded border border-[#C5A059]/30 shadow-xl aspect-[3/4] bg-stone-950 max-w-[280px]">
-                          <img 
-                            src="/shane_dewitt.jpg" 
-                            alt="Shane DeWitt - Co-Founder" 
-                            className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-                            referrerPolicy="no-referrer"
-                          />
-                        </div>
                         <div className="space-y-1">
                           <span className="text-[#C5A059] text-xs font-semibold uppercase tracking-widest">Co-Founder</span>
                           <h3 className="font-serif text-2xl font-semibold text-white">Shane DeWitt</h3>
@@ -771,14 +763,6 @@ const App: React.FC = () => {
                     {/* Arjun Dosaj */}
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                       <div className="lg:col-span-1 space-y-4">
-                        <div className="overflow-hidden rounded border border-[#C5A059]/30 shadow-xl aspect-[3/4] bg-stone-950 max-w-[280px]">
-                          <img 
-                            src="/arjun_dosaj.jpg" 
-                            alt="Arjun Dosaj - Co-Founder" 
-                            className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-                            referrerPolicy="no-referrer"
-                          />
-                        </div>
                         <div className="space-y-1">
                           <span className="text-[#C5A059] text-xs font-semibold uppercase tracking-widest">Co-Founder</span>
                           <h3 className="font-serif text-2xl font-semibold text-white">Arjun Dosaj</h3>
