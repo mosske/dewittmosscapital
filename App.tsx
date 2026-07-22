@@ -101,16 +101,14 @@ const App: React.FC = () => {
             />
             <div className="flex flex-col select-none">
               <span 
-                style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                className={`font-bold text-sm md:text-base tracking-[0.12em] transition-colors duration-300 leading-tight ${
+                className={`font-serif font-bold text-sm md:text-base tracking-[0.12em] transition-colors duration-300 leading-tight ${
                   scrolled ? 'text-stone-900' : 'text-white'
                 }`}
               >
-                DEWITT MOSS DOSAJ CAPITAL
+                DEWITT MOSS DOSAJ
               </span>
               <span 
-                style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                className={`text-[9px] md:text-[10px] font-medium tracking-wide italic transition-colors duration-300 ${
+                className={`font-serif text-[9px] md:text-[10px] font-medium tracking-wide italic transition-colors duration-300 ${
                   scrolled ? 'text-[#C5A059]' : 'text-stone-300'
                 }`}
               >
@@ -1004,14 +1002,12 @@ const App: React.FC = () => {
                 />
                 <div className="flex flex-col select-none">
                   <span 
-                    style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                    className="font-bold text-base tracking-[0.12em] text-[#C5A059] leading-tight"
+                    className="font-serif font-bold text-base tracking-[0.12em] text-[#C5A059] leading-tight"
                   >
-                    DEWITT MOSS DOSAJ CAPITAL
+                    DEWITT MOSS DOSAJ
                   </span>
                   <span 
-                    style={{ fontFamily: "'Times New Roman', Times, serif" }}
-                    className="text-[10px] font-medium tracking-wide italic text-stone-400"
+                    className="font-serif text-[10px] font-medium tracking-wide italic text-stone-400"
                   >
                     Funding Dreams, Fueling Growth
                   </span>
@@ -1064,9 +1060,9 @@ const App: React.FC = () => {
           </div>
 
           <div className="border-t border-stone-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-stone-500 font-light tracking-wider">
-            <p>Copyright &copy; 2026 DeWitt Moss Dosaj Capital. All Rights Reserved.</p>
+            <p>Copyright &copy; 2026 DeWitt Moss Dosaj Capital Pte Ltd. All Rights Reserved.</p>
             <p className="flex gap-1 items-center">
-              <span>Powered by</span> <span className="font-semibold text-stone-400">DeWitt Moss Dosaj Capital</span>
+              <span>Powered by</span> <span className="font-semibold text-stone-400">DeWitt Moss Dosaj Capital Pte Ltd</span>
             </p>
           </div>
         </div>
