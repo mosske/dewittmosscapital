@@ -713,7 +713,7 @@ const App: React.FC = () => {
                   </div>
 
                   {/* Bios List */}
-                  <div className="space-y-24">
+                  <div className="space-y-24 max-w-5xl mx-auto">
                     {/* Keith Moss */}
                     <div className="grid lg:grid-cols-4 gap-12 items-start border-b border-stone-800 pb-16">
                       {/* Image Column */}
