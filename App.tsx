@@ -720,7 +720,7 @@ const App: React.FC = () => {
                       <div className="lg:col-span-1">
                         <div className="relative overflow-hidden rounded-lg shadow-lg">
                           <img 
-                            src="keith-moss.jpg" 
+                            src="/assets/keith-moss.jpg" 
                             alt="Keith Moss"
                             className="w-full h-full object-cover aspect-square"
                           />
@@ -751,7 +751,7 @@ const App: React.FC = () => {
                       <div className="lg:col-span-1">
                         <div className="relative overflow-hidden rounded-lg shadow-lg">
                           <img 
-                            src="shane-dewitt.jpg" 
+                            src="/shane-dewitt.jpg" 
                             alt="Shane DeWitt"
                             className="w-full h-full object-cover aspect-square"
                           />
@@ -780,7 +780,7 @@ const App: React.FC = () => {
                       <div className="lg:col-span-1">
                         <div className="relative overflow-hidden rounded-lg shadow-lg">
                           <img 
-                            src="arjun-dosaj.jpg" 
+                            src="/arjun-dosaj.jpg" 
                             alt="Arjun Dosaj"
                             className="w-full h-full object-cover aspect-square"
                           />
