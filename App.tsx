@@ -232,6 +232,8 @@ const App: React.FC = () => {
                 imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-7341939.jpeg"
                 overlayGradient="linear-gradient(to bottom, rgba(12, 12, 12, 0.45), rgba(12, 12, 12, 0.75))"
                 minHeight="700px"
+                backgroundPosition="center center"
+                parallaxIntensity="ultra"
                 className="relative flex items-center justify-center text-center bg-stone-950"
               >
                 <div className="container mx-auto px-6 max-w-4xl py-24 z-10">
@@ -354,6 +356,8 @@ const App: React.FC = () => {
                 imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-5234277.webp"
                 overlayGradient="linear-gradient(to bottom, rgba(20, 20, 20, 0.45), rgba(20, 20, 20, 0.75))"
                 minHeight="auto"
+                backgroundPosition="center center"
+                parallaxIntensity="ultra"
                 className="relative py-24 bg-stone-900 text-white"
               >
                 <div className="container mx-auto px-6 max-w-7xl z-10 relative">
@@ -631,6 +635,8 @@ const App: React.FC = () => {
                 imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/free-photo-of-modern-constructions-on-seashore-in-coastal-city.jpeg"
                 overlayGradient="linear-gradient(to bottom, rgba(12, 12, 12, 0.4), rgba(12, 12, 12, 0.75))"
                 minHeight="500px"
+                backgroundPosition="center center"
+                parallaxIntensity="ultra"
                 className="relative flex items-center justify-center text-center bg-stone-950"
               >
                 <div className="container mx-auto px-6 max-w-5xl py-24 z-10">
@@ -907,6 +913,8 @@ const App: React.FC = () => {
                 imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-11312733.webp"
                 overlayGradient="linear-gradient(to bottom, rgba(12, 12, 12, 0.4), rgba(12, 12, 12, 0.7))"
                 minHeight="350px"
+                backgroundPosition="center center"
+                parallaxIntensity="ultra"
                 className="relative flex items-center justify-center text-center bg-stone-950"
               >
                 <div className="container mx-auto px-6 max-w-4xl py-12 z-10">

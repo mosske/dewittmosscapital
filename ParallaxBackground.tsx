@@ -7,6 +7,8 @@ interface ParallaxBackgroundProps {
   children?: React.ReactNode;
   className?: string;
   minHeight?: string;
+  backgroundPosition?: string;
+  parallaxIntensity?: 'medium' | 'high' | 'ultra';
 }
 
 export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
@@ -14,7 +16,9 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   overlayGradient = 'linear-gradient(to bottom, rgba(12, 12, 12, 0.45), rgba(12, 12, 12, 0.75))',
   children,
   className = '',
-  minHeight = '500px'
+  minHeight = '500px',
+  backgroundPosition = 'center center',
+  parallaxIntensity = 'high'
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -24,8 +28,13 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
     offset: ['start end', 'end start']
   });
 
-  // map scrollYProgress to translate the background image smoothly
-  const y = useTransform(scrollYProgress, [0, 1], ['-15%', '15%']);
+  // Calculate increased parallax shift based on intensity
+  const yShift = parallaxIntensity === 'ultra' ? ['-40%', '40%'] : parallaxIntensity === 'high' ? ['-32%', '32%'] : ['-20%', '20%'];
+  const topOffset = parallaxIntensity === 'ultra' ? '-40%' : parallaxIntensity === 'high' ? '-32%' : '-20%';
+  const containerHeight = parallaxIntensity === 'ultra' ? '180%' : parallaxIntensity === 'high' ? '164%' : '140%';
+
+  // map scrollYProgress to translate the background image smoothly with high amplitude
+  const y = useTransform(scrollYProgress, [0, 1], yShift);
 
   return (
     <div
@@ -39,11 +48,11 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
         className="absolute inset-0 z-0 bg-stone-950 pointer-events-none"
         style={{
           y,
-          height: '130%', // larger to prevent gaps during translation
-          top: '-15%',
+          height: containerHeight,
+          top: topOffset,
           backgroundImage: `${overlayGradient}, url('${imageUrl}')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: backgroundPosition,
         }}
       />
       
