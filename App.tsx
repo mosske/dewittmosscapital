@@ -713,95 +713,157 @@ const App: React.FC = () => {
                   </div>
 
                   {/* Bios List */}
-                  <div className="space-y-24 max-w-5xl mx-auto">
+                  <div className="space-y-16">
                     {/* Keith Moss */}
-                    <div className="grid lg:grid-cols-4 gap-12 items-start border-b border-stone-800 pb-16">
-                      {/* Image Column */}
-                      <div className="lg:col-span-1">
-                        <div className="relative overflow-hidden rounded-lg shadow-lg max-w-32">
-                          <img 
-                            src="/keith-moss.jpg" 
-                            alt="Keith Moss"
-                            className="w-full h-auto object-contain"
-                          />
+                    <div className="bg-stone-950/80 border border-stone-800 rounded-2xl p-8 lg:p-12 shadow-2xl backdrop-blur-sm transition-all duration-300 hover:border-[#C5A059]/40">
+                      <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+                        {/* Left Column: Photo & Key Facts */}
+                        <div className="lg:col-span-4 space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
+                          <div className="relative group w-full max-w-[260px]">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-[#C5A059]/40 to-amber-600/20 rounded-xl blur opacity-40 group-hover:opacity-80 transition duration-500"></div>
+                            <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-stone-900">
+                              <img 
+                                src="/keith_moss.jpg" 
+                                alt="Keith Moss - Co-Founder" 
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                          </div>
+                          
+                          <div className="space-y-2 w-full">
+                            <span className="inline-block px-3 py-1 bg-[#C5A059]/10 text-[#C5A059] text-[11px] font-semibold uppercase tracking-widest rounded-full border border-[#C5A059]/30">
+                              Co-Founder
+                            </span>
+                            <h3 className="font-serif text-3xl font-semibold text-white tracking-tight">Keith Moss</h3>
+                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">25+ Years Commercial Banking & Finance</div>
+                          </div>
+
+                          <div className="pt-2 w-full border-t border-stone-800/80">
+                            <span className="text-[10px] text-stone-500 uppercase tracking-widest font-semibold block mb-2">Core Expertise</span>
+                            <div className="flex flex-wrap gap-1.5 justify-center lg:justify-start">
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Global Cash Management</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Trade Finance</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Institutional Banking</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Project Capital</span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      {/* Bio Column */}
-                      <div className="lg:col-span-3">
-                        <div className="space-y-4 mb-4">
-                          <span className="text-[#C5A059] text-xs font-semibold uppercase tracking-widest">Co-Founder</span>
-                          <h3 className="font-serif text-2xl font-semibold text-white">Keith Moss</h3>
-                          <div className="text-stone-500 text-xs">25+ Years Experience</div>
-                        </div>
-                        <div className="text-stone-300 text-sm leading-relaxed font-light space-y-4 text-justify">
+
+                        {/* Right Column: Bio Narrative */}
+                        <div className="lg:col-span-8 text-stone-300 text-sm leading-relaxed font-light space-y-5">
+                          <p className="text-stone-200 text-base leading-relaxed font-normal border-l-2 border-[#C5A059] pl-4 italic bg-stone-900/40 py-2 pr-2">
+                            "Motivated by a commitment to help businesses flourish by maximizing the effectiveness of their financial strategies."
+                          </p>
                           <p>
                             Keith is a highly experienced professional with over 25 years in the commercial banking and finance industry, specializing in global cash management, trade finance, and project and asset management. He has a proven track record of managing large accounts, mainly MNCs, large institutional entities, financial institutions and government entities, providing innovative financial solutions tailored to meet diverse client needs. Keith has held significant roles at prestigious banks, including HSBC, OCBC, Royal Bank of Scotland, Wachovia and Wells Fargo. His expertise and proactive approach have established him as a trusted partner for businesses, helping clients optimize financial strategies and achieve success in a dynamic market.
                           </p>
                           <p>
-                            Keith is a passionate advocate of financial empowerment, motivated by a commitment to help businesses flourish by maximizing the effectiveness of their financial strategies. He specializes in securing capital for clients' investment and project requirements, enhancing cash flow management, and streamlining financial processes. With an unwavering emphasis on providing outstanding value, Keith strives to build enduring partnerships that contribute to the growth and success of the organizations he supports.
+                            Keith is a passionate advocate of financial empowerment, motivated by a commitment to help businesses flourish by maximizing the effectiveness of their financial strategies. He specializes in securing capital for clients’ investment and project requirements, enhancing cash flow management, and streamlining financial processes. With an unwavering emphasis on providing outstanding value, Keith strives to build enduring partnerships that contribute to the growth and success of the organizations he supports.
                           </p>
                         </div>
                       </div>
                     </div>
-                    </div>
-                    </div>
 
-                    
                     {/* Shane DeWitt */}
-                    <div className="grid lg:grid-cols-4 gap-12 items-start pt-16 border-b border-stone-800 pb-16">
-                      {/* Image Column */}
-                      <div className="lg:col-span-1">
-                        <div className="relative overflow-hidden rounded-lg shadow-lg max-w-32">
-                          <img 
-                            src="/shane-dewitt.jpg" 
-                            alt="Shane DeWitt"
-                            className="w-full h-auto object-contain"
-                          />
+                    <div className="bg-stone-950/80 border border-stone-800 rounded-2xl p-8 lg:p-12 shadow-2xl backdrop-blur-sm transition-all duration-300 hover:border-[#C5A059]/40">
+                      <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+                        {/* Left Column: Photo & Key Facts */}
+                        <div className="lg:col-span-4 space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
+                          <div className="relative group w-full max-w-[260px]">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-[#C5A059]/40 to-amber-600/20 rounded-xl blur opacity-40 group-hover:opacity-80 transition duration-500"></div>
+                            <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-stone-900">
+                              <img 
+                                src="/shane_dewitt.jpg" 
+                                alt="Shane DeWitt - Co-Founder" 
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                          </div>
+                          
+                          <div className="space-y-2 w-full">
+                            <span className="inline-block px-3 py-1 bg-[#C5A059]/10 text-[#C5A059] text-[11px] font-semibold uppercase tracking-widest rounded-full border border-[#C5A059]/30">
+                              Co-Founder
+                            </span>
+                            <h3 className="font-serif text-3xl font-semibold text-white tracking-tight">Shane DeWitt</h3>
+                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">22+ Years Banking & Finance Leader</div>
+                          </div>
+
+                          <div className="pt-2 w-full border-t border-stone-800/80">
+                            <span className="text-[10px] text-stone-500 uppercase tracking-widest font-semibold block mb-2">Core Expertise</span>
+                            <div className="flex flex-wrap gap-1.5 justify-center lg:justify-start">
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Private & Boutique Banking</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Capital Raising</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Institutional Investors</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">UHNW Portfolio Mgmt</span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      {/* Bio Column */}
-                      <div className="lg:col-span-3">
-                        <div className="space-y-4 mb-4">
-                          <span className="text-[#C5A059] text-xs font-semibold uppercase tracking-widest">Co-Founder</span>
-                          <h3 className="font-serif text-2xl font-semibold text-white">Shane DeWitt</h3>
-                          <div className="text-stone-500 text-xs">22+ Years Experience</div>
+
+                        {/* Right Column: Bio Narrative */}
+                        <div className="lg:col-span-8 text-stone-300 text-sm leading-relaxed font-light space-y-5">
+                          <p className="text-stone-200 text-base leading-relaxed font-normal border-l-2 border-[#C5A059] pl-4 italic bg-stone-900/40 py-2 pr-2">
+                            "Excels in bringing institutional investors together, facilitating connections, and raising strategic capital globally."
+                          </p>
+                          <p>
+                            With a career spanning over 22 years, Shane has become a prominent figure in the banking and finance sector. His extensive experience covers a diverse range of roles, enabling him to develop a deep understanding of the industry. Shane’s journey is marked by his dedication to business development and client relationship management, where he has consistently navigated complex financial landscapes while delivering exemplary service. Shane has worked at several renowned private and boutique banks, successfully managing portfolios for top-level clients, including influential country heads, monarchs, and large commercial entities. His expertise in understanding the unique needs of high-profile clients has allowed him to tailor financial solutions that foster trust and satisfaction, solidifying his reputation as a leader in the industry.
+                          </p>
+                          <p>
+                            Additionally, Shane has built strong relationships with a network of high-level institutional investors globally. He excels in bringing parties together, facilitating connections, and raising capital to meet diverse client needs. His exceptional negotiation skills and strategic insights position him as a key player in driving successful financial partnerships and investment opportunities.
+                          </p>
                         </div>
-                        <div className="text-stone-300 text-sm leading-relaxed font-light space-y-4 text-justify">
-                        <p>
-                          With a career spanning over 22 years, Shane has become a prominent figure in the banking and finance sector. His extensive experience covers a diverse range of roles, enabling him to develop a deep understanding of the industry. Shane’s journey is marked by his dedication to business development and client relationship management, where he has consistently navigated complex financial landscapes while delivering exemplary service. Shane has worked at several renowned private and boutique banks, successfully managing portfolios for top-level clients, including influential country heads, monarchs, and large commercial entities. His expertise in understanding the unique needs of high-profile clients has allowed him to tailor financial solutions that foster trust and satisfaction, solidifying his reputation as a leader in the industry.
-                        </p>
-                        <p>
-                          Additionally, Shane has built strong relationships with a network of high-level institutional investors globally. He excels in bringing parties together, facilitating connections, and raising capital to meet diverse client needs. His exceptional negotiation skills and strategic insights position him as a key player in driving successful financial partnerships and investment opportunities.
-                        </p>
                       </div>
                     </div>
 
                     {/* Arjun Dosaj */}
-                    <div className="grid lg:grid-cols-4 gap-12 items-start pt-16 border-b border-stone-800 pb-16">
-                      {/* Image Column */}
-                      <div className="lg:col-span-1">
-                        <div className="relative overflow-hidden rounded-lg shadow-lg max-w-32">
-                          <img 
-                            src="/arjun-dosaj.jpg" 
-                            alt="Arjun Dosaj"
-                            className="w-full h-auto object-contain"
-                          />
+                    <div className="bg-stone-950/80 border border-stone-800 rounded-2xl p-8 lg:p-12 shadow-2xl backdrop-blur-sm transition-all duration-300 hover:border-[#C5A059]/40">
+                      <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+                        {/* Left Column: Photo & Key Facts */}
+                        <div className="lg:col-span-4 space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
+                          <div className="relative group w-full max-w-[260px]">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-[#C5A059]/40 to-amber-600/20 rounded-xl blur opacity-40 group-hover:opacity-80 transition duration-500"></div>
+                            <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-stone-900">
+                              <img 
+                                src="/arjun_dosaj.jpg" 
+                                alt="Arjun Dosaj - Co-Founder" 
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                          </div>
+                          
+                          <div className="space-y-2 w-full">
+                            <span className="inline-block px-3 py-1 bg-[#C5A059]/10 text-[#C5A059] text-[11px] font-semibold uppercase tracking-widest rounded-full border border-[#C5A059]/30">
+                              Co-Founder
+                            </span>
+                            <h3 className="font-serif text-3xl font-semibold text-white tracking-tight">Arjun Dosaj</h3>
+                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">30+ Years Global Real Estate & Asset Management</div>
+                          </div>
+
+                          <div className="pt-2 w-full border-t border-stone-800/80">
+                            <span className="text-[10px] text-stone-500 uppercase tracking-widest font-semibold block mb-2">Core Expertise</span>
+                            <div className="flex flex-wrap gap-1.5 justify-center lg:justify-start">
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Pan-Asian Real Estate</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">$4B+ Asset Portfolio</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Distressed Real Estate</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Six Sigma Black Belt</span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      {/* Bio Column */}
-                      <div className="lg:col-span-3">
-                        <div className="space-y-4 mb-4">
-                          <span className="text-[#C5A059] text-xs font-semibold uppercase tracking-widest">Co-Founder</span>
-                          <h3 className="font-serif text-2xl font-semibold text-white">Arjun Dosaj</h3>
-                          <div className="text-stone-500 text-xs">40+ Years Experience</div>
+
+                        {/* Right Column: Bio Narrative */}
+                        <div className="lg:col-span-8 text-stone-300 text-sm leading-relaxed font-light space-y-5">
+                          <p className="text-stone-200 text-base leading-relaxed font-normal border-l-2 border-[#C5A059] pl-4 italic bg-stone-900/40 py-2 pr-2">
+                            "Managed a portfolio exceeding $4 Billion in real estate assets across Asia, overseeing multi-strategy funds and mandates for institutional investors."
+                          </p>
+                          <p>
+                            Arjun is a seasoned professional with over 30 years of extensive global experience across diverse industries, including Hospitality and Leisure, Private Equity Real Estate, Insurance, Mortgage, Banking, and Business Process Offshoring. His primary expertise is rooted in the Real Estate sector, with a strong focus on Asset Management, Portfolio Management, Distressed Real Estate, and Value Enhancement strategies. In his impressive career, Arjun has held senior leadership positions at prominent organizations such as the Indian Hotels Company, GE Capital, Standard Chartered Bank, and Pacific Star Group. Before founding Avista Asset Management, he served as the President of Asset Management and Group COO at Pacific Star, a leading private equity real estate investment management firm with a pan-Asian focus. In this capacity, Arjun successfully managed a portfolio exceeding $4 billion in real estate assets across Asia, overseeing multi-strategy funds and mandates for institutional investors.
+                          </p>
+                          <p>
+                            During his tenure at Pacific Star, Arjun played a pivotal role in several landmark real estate transactions and turnaround strategies, contributing to high-profile projects such as Capital Square (Singapore), Triple One Somerset (Singapore), The Platinum (Shanghai), Cross Tower (Shanghai), KL Pavilion (Kuala Lumpur), Noon Square (Seoul), GH House (Tokyo), Sathorn Gardens (Bangkok), 8 Thonglor (Bangkok), and Sunrise City (Ho Chi Minh City), among others. At DeWitt Moss Dosaj Capital, Arjun’s current focus is on delivering comprehensive asset management and investment services within the real estate spectrum for clients across Southeast Asia, India, and China. His areas of interest encompass Portfolio & Asset Management, Development Management, Distressed Real Estate assets and portfolios, and Fund Management across various sectors, including Commercial, Retail, Residential, Hospitality, and Retirement Homes & Communities. Arjun is also a certified Six Sigma Black Belt and has received specialized training as an expert in Design for Six Sigma (DFSS) processes, further enhancing his ability to drive operational excellence and innovation within the organizations he serves.
+                          </p>
                         </div>
-                        <div className="text-stone-300 text-sm leading-relaxed font-light space-y-4 text-justify">
-                        <p>
-                          Arjun is a seasoned professional with over 30 years of extensive global experience across diverse industries, including Hospitality and Leisure, Private Equity Real Estate, Insurance, Mortgage, Banking, and Business Process Offshoring. His primary expertise is rooted in the Real Estate sector, with a strong focus on Asset Management, Portfolio Management, Distressed Real Estate, and Value Enhancement strategies. In his impressive career, Arjun has held senior leadership positions at prominent organizations such as the Indian Hotels Company, GE Capital, Standard Chartered Bank, and Pacific Star Group. Before founding Avista Asset Management, he served as the President of Asset Management and Group COO at Pacific Star, a leading private equity real estate investment management firm with a pan-Asian focus. In this capacity, Arjun successfully managed a portfolio exceeding $4 billion in real estate assets across Asia, overseeing multi-strategy funds and mandates for institutional investors.
-                        </p>
-                        <p>
-                          During his tenure at Pacific Star, Arjun played a pivotal role in several landmark real estate transactions and turnaround strategies, contributing to high-profile projects such as Capital Square (Singapore), Triple One Somerset (Singapore), The Platinum (Shanghai), Cross Tower (Shanghai), KL Pavilion (Kuala Lumpur), Noon Square (Seoul), GH House (Tokyo), Sathorn Gardens (Bangkok), 8 Thonglor (Bangkok), and Sunrise City (Ho Chi Minh City), among others. At DeWitt Moss Dosaj Capital, Arjun’s current focus is on delivering comprehensive asset management and investment services within the real estate spectrum for clients across Southeast Asia, India, and China. His areas of interest encompass Portfolio & Asset Management, Development Management, Distressed Real Estate assets and portfolios, and Fund Management across various sectors, including Commercial, Retail, Residential, Hospitality, and Retirement Homes & Communities. Arjun is also a certified Six Sigma Black Belt and has received specialized training as an expert in Design for Six Sigma (DFSS) processes, further enhancing his ability to drive operational excellence and innovation within the organizations he serves.
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -1053,7 +1115,7 @@ const App: React.FC = () => {
                   </span>
                 </div>
               </div>
-              <p className="text-stone-400 text-xs font-light leading-relaxed max-w-32">
+              <p className="text-stone-400 text-xs font-light leading-relaxed max-w-xs">
                 Bespoke funding and capital advisory services engineered for institutional success across pivotal Asian markets.
               </p>
             </div>
