@@ -746,15 +746,25 @@ const App: React.FC = () => {
 
                     
                     {/* Shane DeWitt */}
-                    <div className="grid lg:grid-cols-3 gap-12 items-start border-b border-stone-800 pb-16">
-                      <div className="lg:col-span-1 space-y-4">
-                        <div className="space-y-1">
+                    <div className="grid lg:grid-cols-4 gap-12 items-start border-b border-stone-800 pb-16">
+                      {/* Image Column */}
+                      <div className="lg:col-span-1">
+                        <div className="relative overflow-hidden rounded-lg shadow-lg">
+                          <img 
+                            src="/shane-dewitt.jpg" 
+                            alt="Shane DeWitt"
+                            className="w-full h-full object-cover aspect-square"
+                          />
+                        </div>
+                      </div>
+                      {/* Bio Column */}
+                      <div className="lg:col-span-3">
+                        <div className="space-y-4 mb-4">
                           <span className="text-[#C5A059] text-xs font-semibold uppercase tracking-widest">Co-Founder</span>
                           <h3 className="font-serif text-2xl font-semibold text-white">Shane DeWitt</h3>
                           <div className="text-stone-500 text-xs">22+ Years Experience</div>
                         </div>
-                      </div>
-                      <div className="lg:col-span-2 text-stone-300 text-sm leading-relaxed font-light space-y-4 text-justify">
+                        <div className="text-stone-300 text-sm leading-relaxed font-light space-y-4 text-justify">
                         <p>
                           With a career spanning over 22 years, Shane has become a prominent figure in the banking and finance sector. His extensive experience covers a diverse range of roles, enabling him to develop a deep understanding of the industry. Shane’s journey is marked by his dedication to business development and client relationship management, where he has consistently navigated complex financial landscapes while delivering exemplary service. Shane has worked at several renowned private and boutique banks, successfully managing portfolios for top-level clients, including influential country heads, monarchs, and large commercial entities. His expertise in understanding the unique needs of high-profile clients has allowed him to tailor financial solutions that foster trust and satisfaction, solidifying his reputation as a leader in the industry.
                         </p>
@@ -765,15 +775,25 @@ const App: React.FC = () => {
                     </div>
 
                     {/* Arjun Dosaj */}
-                    <div className="grid lg:grid-cols-3 gap-12 items-start">
-                      <div className="lg:col-span-1 space-y-4">
-                        <div className="space-y-1">
+                    <div className="grid lg:grid-cols-4 gap-12 items-start">
+                      {/* Image Column */}
+                      <div className="lg:col-span-1">
+                        <div className="relative overflow-hidden rounded-lg shadow-lg">
+                          <img 
+                            src="/arjun-dosaj.jpg" 
+                            alt="Arjun Dosaj"
+                            className="w-full h-full object-cover aspect-square"
+                          />
+                        </div>
+                      </div>
+                      {/* Bio Column */}
+                      <div className="lg:col-span-3">
+                        <div className="space-y-4 mb-4">
                           <span className="text-[#C5A059] text-xs font-semibold uppercase tracking-widest">Co-Founder</span>
                           <h3 className="font-serif text-2xl font-semibold text-white">Arjun Dosaj</h3>
                           <div className="text-stone-500 text-xs">40+ Years Experience</div>
                         </div>
-                      </div>
-                      <div className="lg:col-span-2 text-stone-300 text-sm leading-relaxed font-light space-y-4 text-justify">
+                        <div className="text-stone-300 text-sm leading-relaxed font-light space-y-4 text-justify">
                         <p>
                           Arjun is a seasoned professional with over 30 years of extensive global experience across diverse industries, including Hospitality and Leisure, Private Equity Real Estate, Insurance, Mortgage, Banking, and Business Process Offshoring. His primary expertise is rooted in the Real Estate sector, with a strong focus on Asset Management, Portfolio Management, Distressed Real Estate, and Value Enhancement strategies. In his impressive career, Arjun has held senior leadership positions at prominent organizations such as the Indian Hotels Company, GE Capital, Standard Chartered Bank, and Pacific Star Group. Before founding Avista Asset Management, he served as the President of Asset Management and Group COO at Pacific Star, a leading private equity real estate investment management firm with a pan-Asian focus. In this capacity, Arjun successfully managed a portfolio exceeding $4 billion in real estate assets across Asia, overseeing multi-strategy funds and mandates for institutional investors.
                         </p>
