@@ -742,7 +742,7 @@ const App: React.FC = () => {
                               Co-Founder
                             </span>
                             <h3 className="font-serif text-3xl font-semibold text-white tracking-tight">Keith Moss</h3>
-                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">25+ Years Commercial Banking & Finance</div>
+                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">27+ Years Commercial Banking & Trade Finance</div>
                           </div>
 
                           <div className="pt-2 w-full border-t border-stone-800/80">
@@ -793,7 +793,7 @@ const App: React.FC = () => {
                               Co-Founder
                             </span>
                             <h3 className="font-serif text-3xl font-semibold text-white tracking-tight">Shane DeWitt</h3>
-                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">22+ Years Banking & Finance Leader</div>
+                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">24+ Years Private & Commercial Banking and Specialized Banking</div>
                           </div>
 
                           <div className="pt-2 w-full border-t border-stone-800/80">
@@ -844,7 +844,7 @@ const App: React.FC = () => {
                               Co-Founder
                             </span>
                             <h3 className="font-serif text-3xl font-semibold text-white tracking-tight">Arjun Dosaj</h3>
-                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">30+ Years Global Real Estate & Asset Management</div>
+                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">42+ Years Global Real Estate & Asset Management</div>
                           </div>
 
                           <div className="pt-2 w-full border-t border-stone-800/80">
