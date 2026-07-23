@@ -720,7 +720,7 @@ const App: React.FC = () => {
                       <div className="lg:col-span-1">
                         <div className="relative overflow-hidden rounded-lg shadow-lg">
                           <img 
-                            src="/assets/keith-moss.jpg" 
+                            src="/keith-moss.jpg" 
                             alt="Keith Moss"
                             className="w-full h-full object-cover aspect-square"
                           />
