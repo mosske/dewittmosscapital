@@ -718,7 +718,7 @@ const App: React.FC = () => {
                     <div className="grid lg:grid-cols-4 gap-12 items-start border-b border-stone-800 pb-16">
                       {/* Image Column */}
                       <div className="lg:col-span-1">
-                        <div className="relative overflow-hidden rounded-lg shadow-lg max-w-xs">
+                        <div className="relative overflow-hidden rounded-lg shadow-lg max-w-44">
                           <img 
                             src="/keith-moss.jpg" 
                             alt="Keith Moss"
@@ -751,7 +751,7 @@ const App: React.FC = () => {
                     <div className="grid lg:grid-cols-4 gap-12 items-start border-b border-stone-800 pb-16">
                       {/* Image Column */}
                       <div className="lg:col-span-1">
-                        <div className="relative overflow-hidden rounded-lg shadow-lg max-w-xs">
+                        <div className="relative overflow-hidden rounded-lg shadow-lg max-w-44">
                           <img 
                             src="/shane-dewitt.jpg" 
                             alt="Shane DeWitt"
@@ -780,7 +780,7 @@ const App: React.FC = () => {
                     <div className="grid lg:grid-cols-4 gap-12 items-start">
                       {/* Image Column */}
                       <div className="lg:col-span-1">
-                        <div className="relative overflow-hidden rounded-lg shadow-lg max-w-xs">
+                        <div className="relative overflow-hidden rounded-lg shadow-lg max-w-44">
                           <img 
                             src="/arjun-dosaj.jpg" 
                             alt="Arjun Dosaj"
@@ -1053,7 +1053,7 @@ const App: React.FC = () => {
                   </span>
                 </div>
               </div>
-              <p className="text-stone-400 text-xs font-light leading-relaxed max-w-xs">
+              <p className="text-stone-400 text-xs font-light leading-relaxed max-w-44">
                 Bespoke funding and capital advisory services engineered for institutional success across pivotal Asian markets.
               </p>
             </div>
