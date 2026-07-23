@@ -748,7 +748,7 @@ const App: React.FC = () => {
 
                     
                     {/* Shane DeWitt */}
-                    <div className="grid lg:grid-cols-4 gap-12 items-start border-b border-stone-800 pb-16">
+                    <div className="grid lg:grid-cols-4 gap-12 items-start pt-16 border-b border-stone-800 pb-16">
                       {/* Image Column */}
                       <div className="lg:col-span-1">
                         <div className="relative overflow-hidden rounded-lg shadow-lg max-w-32">
@@ -777,7 +777,7 @@ const App: React.FC = () => {
                     </div>
 
                     {/* Arjun Dosaj */}
-                    <div className="grid lg:grid-cols-4 gap-12 items-start">
+                    <div className="grid lg:grid-cols-4 gap-12 items-start pt-16 border-b border-stone-800 pb-16">
                       {/* Image Column */}
                       <div className="lg:col-span-1">
                         <div className="relative overflow-hidden rounded-lg shadow-lg max-w-32">
