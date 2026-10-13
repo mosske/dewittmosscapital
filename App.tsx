@@ -1541,7 +1541,7 @@ const App: React.FC = () => {
           </div>
 
           <div className="border-t border-stone-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-stone-500 font-light tracking-wider">
-            <p>Copyright &copy; 2026 DeWitt Moss Dosaj Capital Pte Ltd. All Rights Reserved.</p>
+            <p>Copyright &copy; 2027 DeWitt Moss Dosaj Capital Pte Ltd. All Rights Reserved.</p>
             <p className="flex gap-1 items-center">
               <span>Powered by</span> <span className="font-semibold text-stone-400">DeWitt Moss Dosaj Capital Pte Ltd</span>
             </p>
