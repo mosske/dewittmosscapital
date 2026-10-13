@@ -266,8 +266,8 @@ const App: React.FC = () => {
               transition={{ duration: 0.4 }}
             >
               {/* HERO SECTION */}
-              <ParallaxBackground 
-                imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-7341939.jpeg"
+              <ParallaxBackground
+                imageUrl="/colonial-doorway.jpg"
                 overlayGradient="linear-gradient(to bottom, rgba(12, 12, 12, 0.45), rgba(12, 12, 12, 0.75))"
                 minHeight="700px"
                 backgroundPosition="center center"
@@ -436,12 +436,13 @@ const App: React.FC = () => {
               </section>
 
               {/* STRATEGY SECTION */}
-              <ParallaxBackground 
-                imageUrl="https://dewittmosscapital.com/wp-content/uploads/2024/10/pexels-photo-5234277.webp"
+              <ParallaxBackground
+                imageUrl="/chessboard.jpg"
                 overlayGradient="linear-gradient(to bottom, rgba(20, 20, 20, 0.45), rgba(20, 20, 20, 0.75))"
                 minHeight="auto"
                 backgroundPosition="center center"
                 parallaxIntensity="ultra"
+                backgroundSize="contain"
                 className="relative py-24 bg-stone-900 text-white"
               >
                 <div className="container mx-auto px-6 max-w-7xl z-10 relative">

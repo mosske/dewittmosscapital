@@ -9,6 +9,7 @@ interface ParallaxBackgroundProps {
   minHeight?: string;
   backgroundPosition?: string;
   parallaxIntensity?: 'medium' | 'high' | 'ultra';
+  backgroundSize?: 'cover' | 'contain';
 }
 
 export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
@@ -18,7 +19,8 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   className = '',
   minHeight = '500px',
   backgroundPosition = 'center center',
-  parallaxIntensity = 'high'
+  parallaxIntensity = 'high',
+  backgroundSize = 'cover'
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -51,7 +53,7 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
           height: containerHeight,
           top: topOffset,
           backgroundImage: `${overlayGradient}, url('${imageUrl}')`,
-          backgroundSize: 'cover',
+          backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
         }}
       />
