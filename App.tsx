@@ -1041,7 +1041,7 @@ const App: React.FC = () => {
                     className="max-w-4xl mx-auto text-center mb-20"
                   >
                     <p className="text-stone-300 text-base leading-relaxed font-light">
-                      Arjun Dosaj, Keith Moss and Shane DeWitt, the visionary founders of our firm, bring a wealth of expertise with over 77 years of combined experience in the finance sector. Their extensive backgrounds encompass a diverse array of roles and achievements, enabling them to establish a strong foundation for the organization. Together, they are committed to driving innovation and excellence in financial solutions, ensuring the success of both their clients and the company.
+                      Arjun Dosaj, Keith Moss and Shane DeWitt, the visionary founders of our firm, bring a wealth of expertise with over 93 years of combined experience in the finance sector. Their extensive backgrounds encompass a diverse array of roles and achievements, enabling them to establish a strong foundation for the organization. Together, they are committed to driving innovation and excellence in financial solutions, ensuring the success of both their clients and the company.
                     </p>
                   </motion.div>
 
