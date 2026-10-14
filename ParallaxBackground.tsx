@@ -9,7 +9,7 @@ interface ParallaxBackgroundProps {
   className?: string;
   minHeight?: string;
   backgroundPosition?: string;
-  parallaxIntensity?: 'medium' | 'high' | 'ultra';
+  parallaxIntensity?: 'none' | 'medium' | 'high' | 'ultra';
   backgroundSize?: 'cover' | 'contain' | string;
   backgroundRepeat?: string;
 }
@@ -64,6 +64,9 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   // map scrollYProgress to translate the background image smoothly with high amplitude
   const y = useTransform(scrollYProgress, [0, 1], yShift);
 
+  // 'none' = image stays stationary and is sized to the block itself (not the oversized 200% parallax layer)
+  const isStatic = parallaxIntensity === 'none';
+
   return (
     <div
       ref={containerRef}
@@ -76,11 +79,11 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
         className="absolute z-0 bg-stone-950 pointer-events-none"
         style={{
           position: 'absolute',
-          top: '-50%',
+          top: isStatic ? 0 : '-50%',
           left: 0,
           width: '100%',
-          height: '200%',
-          y,
+          height: isStatic ? '100%' : '200%',
+          ...(isStatic ? {} : { y }),
           backgroundImage: `${overlayGradient}, url('${activeUrl}')`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
