@@ -441,7 +441,7 @@ const App: React.FC = () => {
                 overlayGradient="linear-gradient(to bottom, rgba(20, 20, 20, 0.45), rgba(20, 20, 20, 0.75))"
                 minHeight="auto"
                 backgroundPosition="center center"
-                parallaxIntensity="none"
+                parallaxIntensity="fixed"
                 backgroundSize="cover"
                 backgroundRepeat="no-repeat"
                 className="relative py-24 bg-stone-900 text-white"

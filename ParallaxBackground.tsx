@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useMotionValue, useMotionValueEvent } from 'framer-motion';
 
 interface ParallaxBackgroundProps {
   imageUrl: string;
@@ -9,7 +9,7 @@ interface ParallaxBackgroundProps {
   className?: string;
   minHeight?: string;
   backgroundPosition?: string;
-  parallaxIntensity?: 'none' | 'medium' | 'high' | 'ultra';
+  parallaxIntensity?: 'fixed' | 'medium' | 'high' | 'ultra';
   backgroundSize?: 'cover' | 'contain' | string;
   backgroundRepeat?: string;
 }
@@ -64,8 +64,34 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   // map scrollYProgress to translate the background image smoothly with high amplitude
   const y = useTransform(scrollYProgress, [0, 1], yShift);
 
-  // 'none' = image stays stationary and is sized to the block itself (not the oversized 200% parallax layer)
-  const isStatic = parallaxIntensity === 'none';
+  // 'fixed' = hero-style parallax, but the image layer is exactly one viewport tall and is moved so the
+  // picture appears pinned to the screen while the block scrolls over it. Because the layer is only one
+  // viewport tall (not 200% of the block), `cover` shows far more of the image instead of zooming in.
+  const isFixed = parallaxIntensity === 'fixed';
+  const sizeRef = useRef({ h: 0, v: 0 });
+  const fixedY = useMotionValue('0px');
+  const updateFixedY = () => {
+    const { h, v } = sizeRef.current;
+    fixedY.set(`${scrollYProgress.get() * (h + v) - v}px`);
+  };
+  useMotionValueEvent(scrollYProgress, 'change', () => {
+    if (isFixed) updateFixedY();
+  });
+  useEffect(() => {
+    if (!isFixed) return;
+    const measure = () => {
+      sizeRef.current = { h: containerRef.current?.offsetHeight || 0, v: window.innerHeight };
+      updateFixedY();
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    const ro = typeof ResizeObserver !== 'undefined' && containerRef.current ? new ResizeObserver(measure) : null;
+    if (ro && containerRef.current) ro.observe(containerRef.current);
+    return () => {
+      window.removeEventListener('resize', measure);
+      ro?.disconnect();
+    };
+  }, [isFixed]);
 
   return (
     <div
@@ -79,11 +105,11 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
         className="absolute z-0 bg-stone-950 pointer-events-none"
         style={{
           position: 'absolute',
-          top: isStatic ? 0 : '-50%',
+          top: isFixed ? 0 : '-50%',
           left: 0,
           width: '100%',
-          height: isStatic ? '100%' : '200%',
-          ...(isStatic ? {} : { y }),
+          height: isFixed ? '100vh' : '200%',
+          y: isFixed ? fixedY : y,
           backgroundImage: `${overlayGradient}, url('${activeUrl}')`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
