@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface ParallaxBackgroundProps {
   imageUrl: string;
+  fallbackImageUrl?: string; // used only if imageUrl fails to load (e.g. file not uploaded yet)
   overlayGradient?: string; // e.g. "linear-gradient(to bottom, rgba(12, 12, 12, 0.45), rgba(12, 12, 12, 0.75))"
   children?: React.ReactNode;
   className?: string;
@@ -14,6 +15,7 @@ interface ParallaxBackgroundProps {
 
 export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   imageUrl,
+  fallbackImageUrl,
   overlayGradient = 'linear-gradient(to bottom, rgba(12, 12, 12, 0.45), rgba(12, 12, 12, 0.75))',
   children,
   className = '',
@@ -23,6 +25,22 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   backgroundSize = 'cover'
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Use the primary image; if it cannot be loaded and a fallback is given, switch to the fallback.
+  const [activeUrl, setActiveUrl] = useState(imageUrl);
+  useEffect(() => {
+    setActiveUrl(imageUrl);
+    if (!fallbackImageUrl) return;
+    let cancelled = false;
+    const probe = new Image();
+    probe.onerror = () => {
+      if (!cancelled) setActiveUrl(fallbackImageUrl);
+    };
+    probe.src = imageUrl;
+    return () => {
+      cancelled = true;
+    };
+  }, [imageUrl, fallbackImageUrl]);
   
   // Track scroll progress of this container relative to the viewport
   const { scrollYProgress } = useScroll({
@@ -52,7 +70,7 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
           y,
           height: containerHeight,
           top: topOffset,
-          backgroundImage: `${overlayGradient}, url('${imageUrl}')`,
+          backgroundImage: `${overlayGradient}, url('${activeUrl}')`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
         }}
