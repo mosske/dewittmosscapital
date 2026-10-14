@@ -10,7 +10,7 @@ interface ParallaxBackgroundProps {
   minHeight?: string;
   backgroundPosition?: string;
   parallaxIntensity?: 'medium' | 'high' | 'ultra';
-  backgroundSize?: 'cover' | 'contain';
+  backgroundSize?: 'cover' | 'contain' | string;
 }
 
 export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
