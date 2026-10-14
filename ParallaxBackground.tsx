@@ -11,6 +11,7 @@ interface ParallaxBackgroundProps {
   backgroundPosition?: string;
   parallaxIntensity?: 'medium' | 'high' | 'ultra';
   backgroundSize?: 'cover' | 'contain' | string;
+  backgroundRepeat?: string;
 }
 
 export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
@@ -22,7 +23,8 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   minHeight = '500px',
   backgroundPosition = 'center center',
   parallaxIntensity = 'high',
-  backgroundSize = 'cover'
+  backgroundSize = 'cover',
+  backgroundRepeat = 'no-repeat'
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -41,7 +43,7 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
       cancelled = true;
     };
   }, [imageUrl, fallbackImageUrl]);
-  
+
   // Track scroll progress of this container relative to the viewport
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -73,9 +75,10 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
           backgroundImage: `${overlayGradient}, url('${activeUrl}')`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
+          backgroundRepeat: backgroundRepeat,
         }}
       />
-      
+
       {/* Content wrapper */}
       <div className="relative z-10 w-full min-h-[inherit] flex flex-col justify-center">
         {children}
