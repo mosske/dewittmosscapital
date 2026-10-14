@@ -12,6 +12,7 @@ interface ParallaxBackgroundProps {
   parallaxIntensity?: 'medium' | 'high' | 'ultra';
   backgroundSize?: 'cover' | 'contain' | string;
   backgroundRepeat?: string;
+  fullBleed?: boolean; // when true, uses full-bleed parallax with extended height
 }
 
 export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
@@ -51,9 +52,15 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
   });
 
   // Calculate increased parallax shift based on intensity
-  const yShift = parallaxIntensity === 'ultra' ? ['-40%', '40%'] : parallaxIntensity === 'high' ? ['-32%', '32%'] : ['-20%', '20%'];
-  const topOffset = parallaxIntensity === 'ultra' ? '-40%' : parallaxIntensity === 'high' ? '-32%' : '-20%';
-  const containerHeight = parallaxIntensity === 'ultra' ? '180%' : parallaxIntensity === 'high' ? '164%' : '140%';
+  const fullBleedFactor = 2; // 200% = 2x container height, -50% offset
+
+  // Calculate parallax shift based on intensity
+  const yShift = parallaxIntensity === 'ultra' ? ['-50%', '50%'] : parallaxIntensity === 'high' ? ['-48%', '48%'] : ['-40%', '40%'];
+  const baseTopOffset = '-50%';
+
+  // Container height and top offset for parallax
+  const containerHeight = fullBleedFactor;
+  const topOffset = baseTopOffset;
 
   // map scrollYProgress to translate the background image smoothly with high amplitude
   const y = useTransform(scrollYProgress, [0, 1], yShift);
@@ -69,9 +76,18 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
       <motion.div
         className="absolute inset-0 z-0 bg-stone-950 pointer-events-none"
         style={{
+          ...fullBleed && {
+            position: 'absolute',
+            top: '-50%',
+            left: 0,
+            width: '100%',
+            height: '200%',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          },
           y,
-          height: containerHeight,
-          top: topOffset,
+          ...!fullBleed && { height: containerHeight },
+          ...!fullBleed && { top: topOffset },
           backgroundImage: `${overlayGradient}, url('${activeUrl}')`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
