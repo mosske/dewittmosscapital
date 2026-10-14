@@ -1041,12 +1041,68 @@ const App: React.FC = () => {
                     className="max-w-4xl mx-auto text-center mb-20"
                   >
                     <p className="text-stone-300 text-base leading-relaxed font-light">
-                      Shane DeWitt, Keith Moss and Arjun Dosaj, the visionary founders of our firm, bring a wealth of expertise with over 77 years of combined experience in the finance sector. Their extensive backgrounds encompass a diverse array of roles and achievements, enabling them to establish a strong foundation for the organization. Together, they are committed to driving innovation and excellence in financial solutions, ensuring the success of both their clients and the company.
+                      Arjun Dosaj, Keith Moss and Shane DeWitt, the visionary founders of our firm, bring a wealth of expertise with over 77 years of combined experience in the finance sector. Their extensive backgrounds encompass a diverse array of roles and achievements, enabling them to establish a strong foundation for the organization. Together, they are committed to driving innovation and excellence in financial solutions, ensuring the success of both their clients and the company.
                     </p>
                   </motion.div>
 
                   {/* Bios List */}
                   <div className="space-y-16">
+                    {/* Arjun Dosaj */}
+                    <motion.div 
+                      initial={{ opacity: 0, y: 35 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.7 }}
+                      className="bg-stone-950/80 border border-stone-800 rounded-2xl p-8 lg:p-12 shadow-2xl backdrop-blur-sm transition-all duration-300 hover:border-[#C5A059]/40"
+                    >
+                      <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+                        {/* Left Column: Photo & Key Facts */}
+                        <div className="lg:col-span-4 space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
+                          <div className="relative group w-full max-w-[260px]">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-[#C5A059]/40 to-amber-600/20 rounded-xl blur opacity-40 group-hover:opacity-80 transition duration-500"></div>
+                            <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-stone-900">
+                              <img 
+                                src="/arjun_dosaj.jpg" 
+                                alt="Arjun Dosaj - Co-Founder" 
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                          </div>
+                          
+                          <div className="space-y-2 w-full">
+                            <span className="inline-block px-3 py-1 bg-[#C5A059]/10 text-[#C5A059] text-[11px] font-semibold uppercase tracking-widest rounded-full border border-[#C5A059]/30">
+                              Co-Founder
+                            </span>
+                            <h3 className="font-serif text-3xl font-semibold text-white tracking-tight">Arjun Dosaj</h3>
+                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">42+ Years Global Real Estate & Asset Management</div>
+                          </div>
+
+                          <div className="pt-2 w-full border-t border-stone-800/80">
+                            <span className="text-[10px] text-stone-500 uppercase tracking-widest font-semibold block mb-2">Core Expertise</span>
+                            <div className="flex flex-wrap gap-1.5 justify-center lg:justify-start">
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Pan-Asian Real Estate</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">$4B+ Asset Portfolio</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Distressed Real Estate</span>
+                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Six Sigma Black Belt</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Right Column: Bio Narrative */}
+                        <div className="lg:col-span-8 text-stone-300 text-sm leading-relaxed font-light space-y-5">
+                          <p className="text-stone-200 text-base leading-relaxed font-normal border-l-2 border-[#C5A059] pl-4 italic bg-stone-900/40 py-2 pr-2">
+                            "Managed a portfolio exceeding $4 Billion in real estate assets across Asia, overseeing multi-strategy funds and mandates for institutional investors."
+                          </p>
+                          <p>
+                            Arjun is a seasoned professional with over 42 years of extensive global experience across diverse industries, including Hospitality and Leisure, Private Equity Real Estate, Insurance, Mortgage, Banking, and Business Process Offshoring. His primary expertise is rooted in the Real Estate sector, with a strong focus on Asset Management, Portfolio Management, Distressed Real Estate, and Value Enhancement strategies. In his impressive career, Arjun has held senior leadership positions at prominent organizations such as the Indian Hotels Company, GE Capital, Standard Chartered Bank, and Pacific Star Group. Before founding Avista Asset Management, he served as the President of Asset Management and Group COO at Pacific Star, a leading private equity real estate investment management firm with a pan-Asian focus. In this capacity, Arjun successfully managed a portfolio exceeding $4 billion in real estate assets across Asia, overseeing multi-strategy funds and mandates for institutional investors.
+                          </p>
+                          <p>
+                            During his tenure at Pacific Star, Arjun played a pivotal role in several landmark real estate transactions and turnaround strategies, contributing to high-profile projects such as Capital Square (Singapore), Triple One Somerset (Singapore), The Platinum (Shanghai), Cross Tower (Shanghai), KL Pavilion (Kuala Lumpur), Noon Square (Seoul), GH House (Tokyo), Sathorn Gardens (Bangkok), 8 Thonglor (Bangkok), and Sunrise City (Ho Chi Minh City), among others. At DeWitt Moss Dosaj Capital, Arjun’s current focus is on delivering comprehensive asset management and investment services within the real estate spectrum for clients across Southeast Asia, India, and China. His areas of interest encompass Portfolio & Asset Management, Development Management, Distressed Real Estate assets and portfolios, and Fund Management across various sectors, including Commercial, Retail, Residential, Hospitality, and Retirement Homes & Communities. Arjun is also a certified Six Sigma Black Belt and has received specialized training as an expert in Design for Six Sigma (DFSS) processes, further enhancing his ability to drive operational excellence and innovation within the organizations he serves.
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
                     {/* Keith Moss */}
                     <motion.div 
                       initial={{ opacity: 0, y: 35 }}
@@ -1103,7 +1159,6 @@ const App: React.FC = () => {
                         </div>
                       </div>
                     </motion.div>
-
                     {/* Shane DeWitt */}
                     <motion.div 
                       initial={{ opacity: 0, y: 35 }}
@@ -1156,63 +1211,6 @@ const App: React.FC = () => {
                           </p>
                           <p>
                             Additionally, Shane has built strong relationships with a network of high-level institutional investors globally. He excels in bringing parties together, facilitating connections, and raising capital to meet diverse client needs. His exceptional negotiation skills and strategic insights position him as a key player in driving successful financial partnerships and investment opportunities.
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-
-                    {/* Arjun Dosaj */}
-                    <motion.div 
-                      initial={{ opacity: 0, y: 35 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-80px" }}
-                      transition={{ duration: 0.7 }}
-                      className="bg-stone-950/80 border border-stone-800 rounded-2xl p-8 lg:p-12 shadow-2xl backdrop-blur-sm transition-all duration-300 hover:border-[#C5A059]/40"
-                    >
-                      <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-                        {/* Left Column: Photo & Key Facts */}
-                        <div className="lg:col-span-4 space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
-                          <div className="relative group w-full max-w-[260px]">
-                            <div className="absolute -inset-1 bg-gradient-to-r from-[#C5A059]/40 to-amber-600/20 rounded-xl blur opacity-40 group-hover:opacity-80 transition duration-500"></div>
-                            <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-stone-900">
-                              <img 
-                                src="/arjun_dosaj.jpg" 
-                                alt="Arjun Dosaj - Co-Founder" 
-                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
-                                referrerPolicy="no-referrer"
-                              />
-                            </div>
-                          </div>
-                          
-                          <div className="space-y-2 w-full">
-                            <span className="inline-block px-3 py-1 bg-[#C5A059]/10 text-[#C5A059] text-[11px] font-semibold uppercase tracking-widest rounded-full border border-[#C5A059]/30">
-                              Co-Founder
-                            </span>
-                            <h3 className="font-serif text-3xl font-semibold text-white tracking-tight">Arjun Dosaj</h3>
-                            <div className="text-[#C5A059] text-xs font-medium tracking-wide">42+ Years Global Real Estate & Asset Management</div>
-                          </div>
-
-                          <div className="pt-2 w-full border-t border-stone-800/80">
-                            <span className="text-[10px] text-stone-500 uppercase tracking-widest font-semibold block mb-2">Core Expertise</span>
-                            <div className="flex flex-wrap gap-1.5 justify-center lg:justify-start">
-                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Pan-Asian Real Estate</span>
-                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">$4B+ Asset Portfolio</span>
-                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Distressed Real Estate</span>
-                              <span className="px-2.5 py-1 bg-stone-900 text-stone-300 text-[11px] rounded border border-stone-800">Six Sigma Black Belt</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Right Column: Bio Narrative */}
-                        <div className="lg:col-span-8 text-stone-300 text-sm leading-relaxed font-light space-y-5">
-                          <p className="text-stone-200 text-base leading-relaxed font-normal border-l-2 border-[#C5A059] pl-4 italic bg-stone-900/40 py-2 pr-2">
-                            "Managed a portfolio exceeding $4 Billion in real estate assets across Asia, overseeing multi-strategy funds and mandates for institutional investors."
-                          </p>
-                          <p>
-                            Arjun is a seasoned professional with over 42 years of extensive global experience across diverse industries, including Hospitality and Leisure, Private Equity Real Estate, Insurance, Mortgage, Banking, and Business Process Offshoring. His primary expertise is rooted in the Real Estate sector, with a strong focus on Asset Management, Portfolio Management, Distressed Real Estate, and Value Enhancement strategies. In his impressive career, Arjun has held senior leadership positions at prominent organizations such as the Indian Hotels Company, GE Capital, Standard Chartered Bank, and Pacific Star Group. Before founding Avista Asset Management, he served as the President of Asset Management and Group COO at Pacific Star, a leading private equity real estate investment management firm with a pan-Asian focus. In this capacity, Arjun successfully managed a portfolio exceeding $4 billion in real estate assets across Asia, overseeing multi-strategy funds and mandates for institutional investors.
-                          </p>
-                          <p>
-                            During his tenure at Pacific Star, Arjun played a pivotal role in several landmark real estate transactions and turnaround strategies, contributing to high-profile projects such as Capital Square (Singapore), Triple One Somerset (Singapore), The Platinum (Shanghai), Cross Tower (Shanghai), KL Pavilion (Kuala Lumpur), Noon Square (Seoul), GH House (Tokyo), Sathorn Gardens (Bangkok), 8 Thonglor (Bangkok), and Sunrise City (Ho Chi Minh City), among others. At DeWitt Moss Dosaj Capital, Arjun’s current focus is on delivering comprehensive asset management and investment services within the real estate spectrum for clients across Southeast Asia, India, and China. His areas of interest encompass Portfolio & Asset Management, Development Management, Distressed Real Estate assets and portfolios, and Fund Management across various sectors, including Commercial, Retail, Residential, Hospitality, and Retirement Homes & Communities. Arjun is also a certified Six Sigma Black Belt and has received specialized training as an expert in Design for Six Sigma (DFSS) processes, further enhancing his ability to drive operational excellence and innovation within the organizations he serves.
                           </p>
                         </div>
                       </div>
