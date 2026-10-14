@@ -444,7 +444,6 @@ const App: React.FC = () => {
                 parallaxIntensity="high"
                 backgroundSize="cover"
                 backgroundRepeat="no-repeat"
-                fullBleed={true}
                 className="relative py-24 bg-stone-900 text-white"
               >
                 <div className="container mx-auto px-6 max-w-7xl z-10 relative">

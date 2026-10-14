@@ -12,7 +12,6 @@ interface ParallaxBackgroundProps {
   parallaxIntensity?: 'medium' | 'high' | 'ultra';
   backgroundSize?: 'cover' | 'contain' | string;
   backgroundRepeat?: string;
-  fullBleed?: boolean; // when true, uses full-bleed parallax with extended height
 }
 
 export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
@@ -74,20 +73,14 @@ export const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
     >
       {/* Parallax Background Wrapper */}
       <motion.div
-        className="absolute inset-0 z-0 bg-stone-950 pointer-events-none"
+        className="absolute z-0 bg-stone-950 pointer-events-none"
         style={{
-          ...fullBleed && {
-            position: 'absolute',
-            top: '-50%',
-            left: 0,
-            width: '100%',
-            height: '200%',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          },
+          position: 'absolute',
+          top: '-50%',
+          left: 0,
+          width: '100%',
+          height: '200%',
           y,
-          ...!fullBleed && { height: containerHeight },
-          ...!fullBleed && { top: topOffset },
           backgroundImage: `${overlayGradient}, url('${activeUrl}')`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
